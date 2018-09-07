@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Customer_Denied_Location">You did not allowed location. App will shutdown</string>
+    <string name="SHUT_DOWN_THIS_APP">SHUT DOWN</string>
+    <string name="estimate_our_fair">ESTIMATE OUR FAIR</string>
+    <string name="call_uthao">CALL UTHAO</string>
+    <string name="print_money_receipt">PRINT MONEY RECEIPT</string>
+    <string name="waiting_for_you_driver">Waiting for your driver....</string>
+    <string name="looking_for_driver_location">Looking for driver location......</string>
+    <string name="driver_on_his_way">Driver on his way......</string>
+    <string name="Driver_Found">Driver Found</string>
+    <string name="Your_Driver_is_Here">Your Driver is Here</string>
+    <string name="Driver_Distance">Driver Distance:</string>
+    <string name="Meter">Meter</string>
+    <string name="Cash">Cash</string>
+    <string name="Km">Km</string>
+    <string name="Taka">Taka</string>
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="my_location">My Location</string>
+    <string name="general">General</string>
+    <string name="payment_info">Payment Info</string>
+    <string name="update_info">Update Info</string>
+    <string name="no_payment_info_available">No payment info available</string>
+    <string name="please_enter_your_full_name">Please enter your full name....</string>
+    <string name="please_enter_your_email">Please enter your email....</string>
+    <string name="please_enter_your_mobile_number">Please enter your mobile number....</string>
+    <string name="confirm">Confirm</string>
+    <string name="sign_out">Logout</string>
+    <string name="money_receipt">Money Receipt</string>
+    <string name="complain">Complain</string>
+    <string name="miuntes">min</string>
+    <string name="payment">Payment</string>
+</resources>

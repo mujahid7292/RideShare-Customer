@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ride_history">Ride History</string>
+    <string name="fair_estimation_history">Fair Estimation History</string>
+    <string name="promotions">Promotions</string>
+    <string name="notification">Notification</string>
+    <string name="help">Help</string>
+    <string name="settings">Settings</string>
+    <string name="language">বাংলা</string>
+    <string name="open_location_settings">GO TO LOCATION SETTINGS</string>
+    <string name="go_to_location_settings">LOCATION SETTINGS</string>
+    <string name="cancel">CANCEL</string>
+
+
+    <string name="app_name">Uthao</string>
+    <string name="package_name">com.sand_corporation.www.uthao</string>
+    <string name="title_activity_driver_maps">Map</string>
+    <string name="title_activity_customer_maps">Map</string>
+    <string name="autocomplete_hint_pickUp">Tap to get pick up location</string>
+    <string name="autocomplete_hint_Destination">Tap to get destination location</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="browser_key_1">AIzaSyAKQkJtzNwVmOYuVGn3QForRN7wRkAkiPU</string>
+    <string name="google_direction_api">AIzaSyCI7SCHtUiTqn83MnX3mO1YfTF6R-Rmwuo</string>
+    <string name="google_maps_api_debug">AIzaSyCI7SCHtUiTqn83MnX3mO1YfTF6R-Rmwuo</string>
+    <string name="google_maps_api_release">AIzaSyAx1HyFaKxwuGKx-e4FCBOy5hOEdMmERHc</string>
+    <string name="title_activity_home"></string>
+    <string name="facebook_app_id">1938307666421002</string>
+    <string name="fb_login_protocol_scheme">fb1938307666421002</string>
+    <string name="uthao_web_client_id">521345540681-nhnfj5a3qe3loeievmp20hnf0n6le5cj.apps.googleusercontent.com</string>
+
+
+    <string name="permission_preference">PERMISSION_PREFERENCE</string>
+    <string name="permission_read_phone_state">PERMISSION_READ_PHONE_STATE</string>
+    <string name="permission_write_external_storage">PERMISSION_WRITE_EXTERNAL_STORAGE</string>
+    <string name="permission_read_external_storage">PERMISSION_READ_EXTERNAL_STORAGE</string>
+    <string name="permission_contacts">PERMISSION_CONTACTS</string>
+    <string name="permission_fine_location">PERMISSION_FINE_LOCATION</string>
+    <string name="permission_coarse_location">PERMISSION_COARSE_LOCATION</string>
+    <string name="permission_send_sms">PERMISSION_SEND_SMS</string>
+    <string name="permission_read_sms">PERMISSION_READ_SMS</string>
+    <string name="permission_receive_sms">PERMISSION_RECEIVE_SMS</string>
+    <string name="network_not_enabled">GPS IS DISABLED</string>
+    <string name="Customer_Denied_Location">You did not allowed location. App will shutdown</string>
+    <string name="SHUT_DOWN_THIS_APP">SHUT DOWN</string>
+    <string name="estimate_our_fair">ESTIMATE OUR FAIR</string>
+    <string name="call_uthao">CALL UTHAO</string>
+    <string name="go_to_location_settings_manually">Location settings is off in this device. Shut down this app and go to location settings.</string>
+    <string name="shut_down_app">SHUT DOWN</string>
+    <string name="print_money_receipt">PRINT MONEY RECEIPT</string>
+    <string name="waiting_for_you_driver">Waiting for your driver....</string>
+    <string name="looking_for_driver_location">Looking for driver location......</string>
+    <string name="driver_on_his_way">Driver on his way......</string>
+    <string name="Driver_Found">Driver Found</string>
+    <string name="Your_Driver_is_Here">Your Driver is Here</string>
+    <string name="Driver_Distance">Driver Distance:</string>
+    <string name="Meter">Meter</string>
+    <string name="Cash">Cash</string>
+    <string name="Km">Km</string>
+    <string name="Taka">Taka</string>
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="my_location">My Location</string>
+    <string name="general">General</string>
+    <string name="payment_info">Payment Info</string>
+    <string name="update_info">Update Info</string>
+    <string name="no_payment_info_available">No payment info available</string>
+    <string name="please_enter_your_full_name">Please enter your full name....</string>
+    <string name="please_enter_your_email">Please enter your email....</string>
+    <string name="please_enter_your_mobile_number">Please enter your mobile number....</string>
+    <string name="confirm">Confirm</string>
+    <string name="sign_out">Logout</string>
+    <string name="money_receipt">Money Receipt</string>
+    <string name="complain">Complain</string>
+    <string name="miuntes">min</string>
+    <string name="payment">Payment</string>
+</resources>

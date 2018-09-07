@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ride_history">পূর্বের রাইড সমূহ</string>
+    <string name="fair_estimation_history">যাচাই করা ভাড়া সমূহ</string>
+    <string name="promotions">প্রচার</string>
+    <string name="notification">প্রজ্ঞাপন</string>
+    <string name="help">সাহায্য</string>
+    <string name="settings">সেটিংস</string>
+    <string name="language">English</string>
+    <string name="go_to_location_settings_manually">আপনার ডিভাইস এ লোকেশান সেটিংস বন্ধ রয়েছে। অনুগ্রহপূর্বক ডিভাইস সেটিংস এ লোকেশান সেবা চালু করুন</string>
+    <string name="shut_down_app">অ্যাপ বন্ধ করুন</string>
+
+
+    <string name="app_name">উঠাও</string>
+    <string name="package_name">com.sand_corporation.www.uthao</string>
+    <string name="title_activity_driver_maps">ম্যাপ</string>
+    <string name="title_activity_customer_maps">ম্যাপ</string>
+    <string name="autocomplete_hint_pickUp">আপনাকে কোথা থেকে উঠানো হবে</string>
+    <string name="autocomplete_hint_Destination">আপনাকে কোথায় নামানো হবে</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">সেটিংস</string>
+    <string name="browser_key_1">AIzaSyAKQkJtzNwVmOYuVGn3QForRN7wRkAkiPU</string>
+    <string name="google_direction_api">AIzaSyCI7SCHtUiTqn83MnX3mO1YfTF6R-Rmwuo</string>
+    <string name="google_maps_api_debug">AIzaSyCI7SCHtUiTqn83MnX3mO1YfTF6R-Rmwuo</string>
+    <string name="google_maps_api_release">AIzaSyAx1HyFaKxwuGKx-e4FCBOy5hOEdMmERHc</string>
+    <string name="title_activity_home"></string>
+    <string name="facebook_app_id">1938307666421002</string>
+    <string name="fb_login_protocol_scheme">fb1938307666421002</string>
+    <string name="uthao_web_client_id">521345540681-nhnfj5a3qe3loeievmp20hnf0n6le5cj.apps.googleusercontent.com</string>
+
+
+    <string name="permission_preference">PERMISSION_PREFERENCE</string>
+    <string name="permission_read_phone_state">PERMISSION_READ_PHONE_STATE</string>
+    <string name="permission_write_external_storage">PERMISSION_WRITE_EXTERNAL_STORAGE</string>
+    <string name="permission_read_external_storage">PERMISSION_READ_EXTERNAL_STORAGE</string>
+    <string name="permission_contacts">PERMISSION_CONTACTS</string>
+    <string name="permission_fine_location">PERMISSION_FINE_LOCATION</string>
+    <string name="permission_coarse_location">PERMISSION_COARSE_LOCATION</string>
+    <string name="permission_send_sms">PERMISSION_SEND_SMS</string>
+    <string name="permission_read_sms">PERMISSION_READ_SMS</string>
+    <string name="permission_receive_sms">PERMISSION_RECEIVE_SMS</string>
+
+    <string name="network_not_enabled">আপনার ডিভাইস এ জি.পি.স সেবা বন্ধ রয়েছে।</string>
+    <string name="Customer_Denied_Location">আপনি লোকেশান শেয়ারিং সেবা চালু করেননি। আপটি এখন বন্ধ হবে।</string>
+    <string name="SHUT_DOWN_THIS_APP">অ্যাপ বন্ধ করুন</string>
+    <string name="estimate_our_fair">ভাড়া যাচাই করুন</string>
+    <string name="call_uthao">আমাকে উঠাও</string>
+    <string name="open_location_settings">ডিভাইস এর লোকেশান সেটিংস যান</string>
+    <string name="go_to_location_settings">লোকেশান সেটিংস</string>
+    <string name="cancel">বাদ দিন</string>
+    <string name="print_money_receipt">মানি রিসিপ্ট প্রিন্ট করুন</string>
+    <string name="waiting_for_you_driver">আপনার ড্রাইভার এর জন্য অপেক্ষা করছি....</string>
+    <string name="looking_for_driver_location">আপনার জন্য ড্রাইভার খোঁজা হচ্ছে......</string>
+    <string name="driver_on_his_way">ড্রাইভার আসার পথে রয়েছে......</string>
+    <string name="Driver_Found">ড্রাইভার পাওয়া গেছে</string>
+    <string name="Your_Driver_is_Here">ড্রাইভার উপস্থিথ</string>
+    <string name="Driver_Distance">ড্রাইভার এর দূরত্ব:</string>
+    <string name="Meter">মিটার</string>
+    <string name="Cash">নগদ</string>
+    <string name="Km">কি.মি.</string>
+    <string name="Taka">টাকা</string>
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="my_location">My Location</string>
+    <string name="general">সাধারন</string>
+    <string name="payment_info">টাকা লেনদেন</string>
+    <string name="update_info">তথ্য হালনাগাদ</string>
+    <string name="no_payment_info_available">টাকা লেনদেন এর কোন তথ্য নেই</string>
+    <string name="please_enter_your_full_name">আপনার পূর্ণ নাম....</string>
+    <string name="please_enter_your_email">আপনার ইমেইল....</string>
+    <string name="please_enter_your_mobile_number">আপনার মোবাইল নাম্বার....</string>
+    <string name="confirm">সঠিক</string>
+    <string name="sign_out">লগআউট</string>
+    <string name="money_receipt">টাকার রশিদ</string>
+    <string name="complain">অভিযোগ</string>
+    <string name="miuntes">মিনিট</string>
+    <string name="payment">পেমেন্ট</string>
+</resources>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sand_corporation.www.uthao.CustomerHistorySinglePageActivity">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/customerHistorySinglePageMap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date: 17/10/2017 at 7:40pm"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txtCustomerRideDate"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toyota Premio"
+                android:textSize="12sp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/txtDriverCarModel"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="right"
+            android:paddingRight="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Taka: 775"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txtTotalCostOfTheRide"
+                android:layout_gravity="right"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash"
+                android:textSize="12sp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/txtPaymentMode"
+                android:layout_gravity="right"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="From: Bashabo"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/txtCustomerPickUpLocation"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To: Apollo Hospitals"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/txtCustomerDestinationLocation"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Distance: 14 Kilometers"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/txtCustomerRideDistance"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10sp">
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:id="@+id/imgDriverProfilePic"
+            android:src="@mipmap/ic_blank_profile_pic" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:padding="5sp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foisal Ahmed"
+                    android:id="@+id/txtDriverName"
+                    android:paddingLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You Rated"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:id="@+id/rtnDriverRating"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:stepSize="1"
+        />
+
+</LinearLayout>

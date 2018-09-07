@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.FitWindowsFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sand_corporation.www.uthao.Home"
+    android:id="@+id/frameLayout"
+    tools:showIn="@layout/app_bar_home">
+
+    <!-- Map and ImageView in center for simulating the map marker -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/customerMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/navigationDrawerCustomButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_menu"
+        android:contentDescription="@string/navigation_drawer" />
+
+    <ImageButton
+        android:id="@+id/myMapLocationButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="350dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_my_location_black_24dp"
+        android:contentDescription="@string/my_location" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:id="@+id/relativeLayOutpickUpDestinationActualDummyBox">
+
+
+        <!--Here we will put all the layout about pickup and destination selection box-->
+        <!--********************************Layout Start******************************-->
+        <!--Below this card view is dummy card view for pick up location-->
+        <!--//******************Dummy Card View Starts Here*********************-->
+        <LinearLayout
+            android:id="@+id/dummyPickUpSelectorLayOut"
+            android:background="@drawable/dummy_pickup_box"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:orientation="vertical"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/dummyPickUpRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40.5dp"
+                    android:layout_height="40.5dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_pickup_small_icon"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/dummy_pickup_icon"/>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/dummy_pickup_icon"
+                    android:layout_toEndOf="@+id/dummy_pickup_icon"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/crossMarkContainerForPickUp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_box"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center_vertical" />
+                    <EditText
+                        android:id="@+id/edtDummyPickUpSelector"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:cursorVisible="false"
+                        android:hint="@string/autocomplete_hint_pickUp"
+                        android:textColorHint="@color/rippleEffectColor"
+                        android:textColor="@android:color/black"
+                        android:clickable="true"
+                        android:longClickable="false"
+                        android:focusable="false"
+                        android:inputType="textPostalAddress"
+                        android:textSize="14sp"
+                        android:paddingLeft="5dp"
+                        android:paddingStart="5dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent" />
+
+                    <ImageView
+                        android:id="@+id/imgDeleteDummyPickUp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:src="@drawable/ic_cross"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/cardViewDummy"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@android:color/transparent">-->
+
+                <!---->
+
+            <!--</android.support.v7.widget.CardView>-->
+
+        </LinearLayout>
+        <!--Above this card view is dummy card view for pick up location-->
+        <!--//******************Dummy Card View Ends Here*********************-->
+
+
+        <!--Below this card view is Actual card view for pick up location-->
+        <!--//******************Actual Card View Starts Here*********************-->
+        <LinearLayout
+            android:id="@+id/actualPickUpSelectorLayOut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardViewActualPickUpLocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/actualPickUpRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="26dp"
+                        android:src="@drawable/ic_location"
+                        android:id="@+id/actual_pickup_icon"/>
+
+                    <EditText
+                        android:id="@+id/edtActualPickUpSelector"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/actual_pickup_icon"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/autocomplete_hint_pickUp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="9dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/primary_text_light" />
+
+                    <ImageView
+                        android:id="@+id/imgDeleteActualPickUp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="26dp"
+                        android:src="@drawable/ic_cross"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_pick_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/edtActualPickUpSelector"
+                        android:layout_marginTop="10dp"
+                        android:scrollbars="vertical"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+        <!--Below this card view is Actual card view for pick up location-->
+        <!--//******************Actual Card View Starts Here*********************-->
+
+
+        <!--//**********************************************************************************************-->
+        <!--//**********************************************************************************************-->
+        <!--//**********************************************************************************************-->
+        <!--**************************************Destination Location**************************************-->
+
+        <!--Below this card view is dummy card view for Destination  location-->
+        <!--//******************Dummy Card View Starts Here*********************-->
+        <LinearLayout
+            android:id="@+id/dummyDestinationSelectorLayOut"
+            android:background="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="105dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/dummyDestinationRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="40.5dp"
+                    android:layout_height="40.5dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_destination_search_box"
+                    android:id="@+id/dummy_destination_icon"
+                    android:background="@android:color/transparent"/>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/dummy_destination_icon"
+                    android:layout_toEndOf="@+id/dummy_destination_icon"
+                    android:orientation="horizontal"
+                    android:id="@+id/crossMarkContainerForDestination"
+                    android:background="@android:color/transparent">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_box"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center_vertical" />
+
+                    <EditText
+                        android:id="@+id/edtDummyDestinationSelector"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:cursorVisible="false"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/autocomplete_hint_Destination"
+                        android:textColorHint="@color/rippleEffectColor"
+                        android:textColor="@android:color/black"
+                        android:clickable="true"
+                        android:longClickable="false"
+                        android:focusable="false"
+                        android:inputType="textPostalAddress"
+                        android:textSize="14sp"
+                        android:paddingLeft="5dp"
+                        android:paddingStart="5dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgDeleteDummyDestination"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_search"
+                        android:background="@android:color/transparent" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <!--Above this card view is dummy card view for Destination  location-->
+        <!--//******************Dummy Card View Ends Here*********************-->
+
+
+        <!--Below this card view is Actual card view for Destination  location-->
+        <!--//******************Actual Card View Starts Here*********************-->
+        <LinearLayout
+            android:id="@+id/actualDestinationSelectorLayOut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardViewActualDestination"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/actualDestinationRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_location"
+                        android:layout_marginTop="26dp"
+                        android:id="@+id/actual_destination_icon"/>
+
+                    <EditText
+                        android:id="@+id/edtAutocomplete_places_Destination"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/autocomplete_hint_Destination"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="9dp"
+                        android:singleLine="true"
+                        android:layout_toRightOf="@+id/actual_destination_icon"
+                        android:textColor="@android:color/primary_text_light" />
+
+                    <ImageView
+                        android:id="@+id/imgDeleteActualDestination"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="26dp"
+                        android:src="@drawable/ic_cross" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_Destination"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/edtAutocomplete_places_Destination"
+                        android:layout_marginTop="10dp"
+                        android:scrollbars="vertical"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <!--Below this card view is Actual card view for Destination location-->
+        <!--//******************Actual Card View Starts Here*********************-->
+        <!--Here we will put all the layout about pickup and destination selection box-->
+        <!--********************************Layout End******************************-->
+    </RelativeLayout>
+
+
+
+    <!--************************************CALL UTHAO BUTTON**********************************-->
+    <!--******************************************STARTS HERE***************************************-->
+    <!--****************************************************************************************-->
+    <!--****************************************************************************************-->
+    <LinearLayout
+        android:id="@+id/call_uthao_lay_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <!--Call Uthao Button-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="30dp"
+            android:visibility="visible">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/estimate_our_fair"
+                android:textColor="@android:color/white"
+                android:id="@+id/customer_ride_request"
+                android:layout_gravity="center"
+                android:background="@color/black"/>
+        </android.support.v7.widget.CardView>
+
+        <!--Check Address-->
+        <LinearLayout
+            android:id="@+id/checkAddress"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/ic_bg_screen_200dp_height"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_sign1"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check Address"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_bg_text_box"
+                    android:orientation="vertical">
+
+                    <!--Pickup Location-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_box_grey"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:text="From: "/>
+                        <TextView
+                            android:id="@+id/checkPickUpAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:text="b/65, Chayabithi, Eastern Housing, Central Bashabo, Dhaka -1214, Bangladesh"/>
+
+                    </LinearLayout>
+
+                    <!--Destination Location-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_box_grey"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:text="TO: "/>
+                        <TextView
+                            android:id="@+id/checkDestinationAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:text="b/65, Chayabithi, Eastern Housing, Central Bashabo, Dhaka -1214, Bangladesh"/>
+
+                    </LinearLayout>
+
+                    <!--Distance-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_box_grey"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:text="Distance: "/>
+                        <TextView
+                            android:id="@+id/checkDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:text="16 Kilometer"/>
+
+                    </LinearLayout>
+
+                    <!--Ok Or Edit Button-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        android:layout_marginBottom="5dp">
+
+                        <Button
+                            android:id="@+id/editRequest"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Edit"
+                            android:textSize="14sp"
+                            android:background="@drawable/btn_background_white_transparent"
+                            android:textColor="@android:color/white"/>
+                        <Button
+                            android:id="@+id/requestedPickUpAndDestinationAddressOK"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Ok"
+                            android:textSize="14sp"
+                            android:background="@drawable/btn_background_white_transparent"
+                            android:textColor="@android:color/white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <!--Select your Ride-->
+        <LinearLayout
+            android:id="@+id/selectBikeOrCar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/ic_bg_screen_200dp_height"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_signFromSelectYourRide"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select your Ride"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_bg_text_box"
+                android:orientation="horizontal">
+
+                <!--Select Car-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/selectMotorCycle"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/ic_motorcycle"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Bike"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <!--Select Bike-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/selectCar"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/ic_car_premium"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Car"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Select service for car-->
+        <LinearLayout
+            android:id="@+id/selectServiceForCar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/ic_bg_screen_200dp_height"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_sign_select_service_for_car"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select service"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_bg_text_box"
+                android:orientation="horizontal">
+
+                <!--Select Economy-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/selectEconomyServiceForCar"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/ic_car_economy"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Economy"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/economyServiceCostForCar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Cost: 215 Tk"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <!--Select Premium-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/selectPremiumServiceForCar"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/ic_car_premium"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Premium"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/premiumServiceCostForCar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Cost: 315 Tk"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Select service for bike-->
+        <LinearLayout
+            android:id="@+id/selectServiceForBike"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/ic_bg_screen_200dp_height"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_sign_select_service_for_bike"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select service"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_bg_text_box"
+                android:orientation="horizontal">
+
+                <!--Select Economy-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/selectEconomyServiceForBike"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/ic_motorcycle_economy"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Economy"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/economyServiceCostForBike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Cost: 215 Tk"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <!--Select Premium-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/selectPremiumServiceForBike"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/ic_motorcycle"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Premium"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/premiumServiceCostForBike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Cost: 315 Tk"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Select payment method-->
+        <LinearLayout
+            android:id="@+id/selectPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/ic_bg_screen_200dp_height"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_sign_selectPaymentMethod"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select payment"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_bg_text_box"
+                android:orientation="horizontal">
+
+                <!--Select Uthao Wallet-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/selectUthaoWallet"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/ic_payment"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Uthao Wallet"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <!--Select Cash-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/selectCash"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/ic_cash_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:text="Cash"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Place a request to Uthao-->
+        <LinearLayout
+            android:id="@+id/placeArequestToUthao"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/ic_bg_screen_200dp_height"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_signForPlacingRequestToUthao"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Place request"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Place a call for uthao?"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_margin="30dp"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <!--Cancel Or Call Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:layout_marginBottom="5dp">
+
+                <Button
+                    android:id="@+id/cancelRequest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Cancel"
+                    android:textSize="14sp"
+                    android:background="@drawable/btn_background_white_transparent"
+                    android:textColor="@android:color/white"/>
+                <Button
+                    android:id="@+id/callToUthao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Call"
+                    android:textSize="14sp"
+                    android:background="@drawable/btn_background_white_transparent"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--************************************CALL UTHAO BUTTON**********************************-->
+    <!--******************************************ENDS HERE***************************************-->
+    <!--****************************************************************************************-->
+    <!--****************************************************************************************-->
+
+
+
+    <!--************************************ESTIMATE OUR FAIR BUTTON**********************************-->
+    <!--******************************************STARTS HERE***************************************-->
+    <!--****************************************************************************************-->
+    <!--****************************************************************************************-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="30dp"
+        android:visibility="gone">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/estimate_our_fair"
+            android:textColor="@android:color/white"
+            android:id="@+id/btnFairEstimation"
+            android:layout_gravity="center"
+            android:background="@color/black"/>
+    </android.support.v7.widget.CardView>
+
+
+    <!--************************************ESTIMATE OUR FAIR BUTTON**********************************-->
+    <!--******************************************END HERE***************************************-->
+    <!--****************************************************************************************-->
+    <!--****************************************************************************************-->
+</android.support.v7.widget.FitWindowsFrameLayout>

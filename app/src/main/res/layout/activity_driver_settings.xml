@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20sp"
+    tools:context="com.sand_corporation.www.uthao.DriverSettingsActivity">
+
+    <ImageView
+        android:id="@+id/driverProfilePic"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20sp"
+        android:src="@mipmap/ic_blank_profile_pic"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="Please enter your full name...."
+        android:id="@+id/driverFullName"
+        android:textSize="18sp"
+        android:inputType="textCapSentences"
+        android:layout_marginBottom="20sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="Please enter your mobile number...."
+        android:id="@+id/driverPhoneNumber"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:layout_marginBottom="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="Please enter your car model...."
+        android:id="@+id/driverCarModel"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:layout_marginBottom="20sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:textSize="15sp"
+        android:id="@+id/confirmdriverInfo"
+        android:layout_marginBottom="10sp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textSize="15sp"
+        android:id="@+id/backToDriverMapActivity"
+        android:layout_marginBottom="10sp"/>
+
+</LinearLayout>

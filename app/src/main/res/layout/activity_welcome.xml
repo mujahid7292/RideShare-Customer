@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/root_layout"
+tools:context="com.sand_corporation.www.uthao.Welcome">
+
+
+    <!--Welcome Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/welcome_layout"
+        android:background="@drawable/ic_bg_screen"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="180dp"
+            android:id="@+id/linearLayout1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/uthao_logo"
+                android:src="@drawable/ic_inside_logo"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/linearLayout2"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:layout_below="@id/linearLayout1">
+
+            <Button
+                android:id="@+id/btnCustomerLogInWelcome"
+                android:textColor="@android:color/white"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnCustomerRegistration"
+                android:textColor="@android:color/white"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--Customer Sign in phone Verification Layout-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/customerSignInPhoneVerificationLayOut"
+        android:background="@drawable/ic_bg_screen"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign"
+                android:src="@drawable/ic_back_sign"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_mobile"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PHONE:"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtSignInCountryCode"
+                            android:text="+88"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginRight="10dp"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:textAlignment="center"
+                            android:inputType="text|phone"
+                            android:textSize="16sp"
+                            app:met_textColorHint="@android:color/white"
+                            app:met_singleLineEllipsis="true"
+                            app:met_baseColor="@android:color/white"
+                            app:met_floatingLabel="highlight"
+                            app:met_primaryColor="@android:color/white"
+                            android:layout_marginEnd="10dp" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtSignInPhoneNumber"
+                            android:textAlignment="center"
+                            android:inputType="text|phone"
+                            android:textSize="16sp"
+                            android:layout_marginTop="-10dp"
+                            app:met_textColorHint="@android:color/white"
+                            app:met_singleLineEllipsis="true"
+                            app:met_baseColor="@android:color/white"
+                            app:met_floatingLabel="highlight"
+                            app:met_primaryColor="@android:color/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnVerifySignInPhoneNumber"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@android:color/white"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Customer Sign in OTP Layout-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/customerSignInOTPLayOut"
+        android:background="@drawable/ic_bg_screen"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign2"
+                android:src="@drawable/ic_back_sign"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:hint="Enter OTP Here"
+            android:textSize="16sp"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:id="@+id/edtSignInEnterOTP" />
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/white_under_line">
+
+        </View>
+
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:id="@+id/btnVerifySignInOTPNumber"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_background_white_transparent"/>
+    </LinearLayout>
+
+    <!--Customer Registration Phone Verification Layout-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/customerRegistrationPhoneVerificationLayout"
+        android:background="@drawable/ic_bg_screen"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign3"
+                android:src="@drawable/ic_back_sign"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_mobile"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PHONE:"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtRegistrationCountryCode"
+                            android:text="+88"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginRight="10dp"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:textAlignment="center"
+                            android:inputType="text|phone"
+                            android:textSize="16sp"
+                            app:met_textColorHint="@android:color/white"
+                            app:met_singleLineEllipsis="true"
+                            app:met_baseColor="@android:color/white"
+                            app:met_floatingLabel="highlight"
+                            app:met_primaryColor="@android:color/white"
+                            android:layout_marginEnd="10dp" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtRegistrationPhoneNumber"
+                            android:textAlignment="center"
+                            android:inputType="text|phone"
+                            android:textSize="16sp"
+                            android:layout_marginTop="-10dp"
+                            app:met_textColorHint="@android:color/white"
+                            app:met_singleLineEllipsis="true"
+                            app:met_baseColor="@android:color/white"
+                            app:met_floatingLabel="highlight"
+                            app:met_primaryColor="@android:color/white"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnVerifyRegistrationPhoneNumber"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@android:color/white"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Customer Registration OTP Layout-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/customerRegistrationOTPLayOut"
+        android:background="@drawable/ic_bg_screen"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign4"
+                android:src="@drawable/ic_back_sign"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:hint="Enter OTP Here"
+            android:textSize="16sp"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:id="@+id/edtRegistrationEnterOTP" />
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/white_under_line">
+
+        </View>
+
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Verify"
+            android:id="@+id/btnVerifyRegistrationOTPNumber"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_background_white_transparent"/>
+
+
+    </LinearLayout>
+
+    <!--FaceBook+Google+EmailPassword Login Activity-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:id="@+id/customerOtherAccountLinkLayOut"
+        android:background="@drawable/ic_bg_screen"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="60dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:id="@+id/ic_back_sign7"-->
+                    <!--android:src="@drawable/ic_back_sign"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button_facebook_login"
+                    android:text="Register Using FaceBook"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_background_white_transparent"/>
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:padding="10dp"-->
+                <!--app:cardElevation="10dp"-->
+                <!--app:cardCornerRadius="10dp"-->
+                <!--app:cardBackgroundColor="@android:color/transparent">-->
+
+                <!--<com.google.android.gms.common.SignInButton-->
+                <!--android:id="@+id/google_sign_in_button"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:visibility="visible"-->
+                <!--tools:visibility="visible" />-->
+
+                <!--</android.support.v7.widget.CardView>-->
+
+                <Button
+                    android:id="@+id/btnEmailPasswordSignIn"
+                    android:text="Register Providing Detail Info"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_background_white_transparent"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="50dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Get FaceBook Missed Data Manually  Layout-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:id="@+id/faceBookMissedDataLayOut"
+        android:background="@drawable/ic_bg_screen"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="60dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:id="@+id/ic_back_sign5"-->
+                    <!--android:src="@drawable/ic_back_sign"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Up"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/layoutFaceBookMissedName"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_profile_pic"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:text="NAME"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:id="@+id/edtFaceBookMissedName"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter Name"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/layoutFaceBookMissedEmail"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_mail"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EMAIL"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:id="@+id/edtFaceBookMissedEmail"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter email"
+                            android:inputType="text"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/layoutFaceBookMissedGender"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_gender"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GENDER"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioFaceBookMissedGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioFaceBookMissedMale"
+                                android:text="Male"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textColor="@android:color/white"
+                                android:buttonTint="@android:color/white"
+                                tools:targetApi="lollipop"/>
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="30dp"-->
+                                <!--android:layout_height="30dp"-->
+                                <!--android:src="@drawable/ic_male"/>-->
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioFaceBookMissedFemale"
+                                android:text="Female"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:layout_marginLeft="12dp"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginStart="12dp"
+                                android:buttonTint="@android:color/white"
+                                tools:targetApi="lollipop" />
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="30dp"-->
+                                <!--android:layout_height="30dp"-->
+                                <!--android:src="@drawable/ic_female"/>-->
+
+                        </RadioGroup>
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtFaceBookMissedGender"
+                            android:visibility="gone"
+                            android:textAlignment="center"
+                            android:inputType="text"
+                            android:textSize="5sp"
+                            app:met_textColorHint="@android:color/white"
+                            app:met_singleLineEllipsis="true"
+                            app:met_baseColor="@android:color/white"
+                            app:met_floatingLabel="highlight"
+                            app:met_primaryColor="@android:color/white"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/layoutFaceBookMissedBirthDay"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_birthday"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Birthday"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:id="@+id/edtFaceBookMissedBirthDay"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter date of birth"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUpdateFaceBookMissedData"
+                    android:layout_marginLeft="6dp"
+                    android:textColor="@android:color/white"
+                    android:text="Update"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_register_background"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Customer Email Password Registration Layout-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:id="@+id/customerRegisterUsingEmailPasswordLayOut"
+        android:background="@drawable/ic_bg_screen"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_sign6"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Up"
+                        android:textSize="20sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_profile_pic"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:text="NAME"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:id="@+id/edtRegisterName"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter Name"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_mail"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EMAIL"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:id="@+id/edtRegisterEmail"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter email"
+                            android:inputType="textEmailAddress"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_gender"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GENDER"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioCustomerRegisterGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioCustomerRegisterMale"
+                                android:text="Male"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textColor="@android:color/white"
+                                android:buttonTint="@android:color/white"
+                                tools:targetApi="lollipop"/>
+
+                            <!--<ImageView-->
+                            <!--android:layout_width="30dp"-->
+                            <!--android:layout_height="30dp"-->
+                            <!--android:src="@drawable/ic_male"/>-->
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioCustomerRegisterFemale"
+                                android:text="Female"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:layout_marginLeft="12dp"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginStart="12dp"
+                                android:buttonTint="@android:color/white"
+                                tools:targetApi="lollipop" />
+
+                            <!--<ImageView-->
+                            <!--android:layout_width="30dp"-->
+                            <!--android:layout_height="30dp"-->
+                            <!--android:src="@drawable/ic_female"/>-->
+
+                        </RadioGroup>
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtRegisterGender"
+                            android:visibility="gone"
+                            android:textAlignment="center"
+                            android:inputType="text"
+                            android:textSize="5sp"
+                            app:met_textColorHint="@android:color/white"
+                            app:met_singleLineEllipsis="true"
+                            app:met_baseColor="@android:color/white"
+                            app:met_floatingLabel="highlight"
+                            app:met_primaryColor="@android:color/white"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_birthday"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Birthday"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:id="@+id/edtRegisterBirthDay"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter date of birth"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnRegistrationUsingEmailPassword"
+                    android:text="Sign Up"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_background_white_transparent"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"/>
+
+                <Button
+                    android:id="@+id/btnBackToAllAccountPage"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@android:color/white"
+                    android:text="Back"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_background_white_transparent"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
+
+
+
+
+
